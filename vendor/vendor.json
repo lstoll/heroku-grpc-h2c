@@ -15,20 +15,20 @@
 			"revisionTime": "2017-03-07T00:15:33Z"
 		},
 		{
-			"checksumSHA1": "PBnPLrFxoOS6hfAwt+shuUZxGoI=",
+			"checksumSHA1": "72VdhJ3WWI9FwIdS8BZ+8dCMK60=",
 			"path": "github.com/lstoll/grpce/h2c",
-			"revision": "9559fcc3bc54b8ecb785e74f41c5f4d9a47ab7c3",
-			"revisionTime": "2016-12-17T19:07:41Z",
-			"version": "v1.3.1",
-			"versionExact": "v1.3.1"
+			"revision": "9633e639341c345fe05388564e2745f13463d574",
+			"revisionTime": "2017-03-08T02:06:33Z",
+			"version": "v1.4.0",
+			"versionExact": "v1.4.0"
 		},
 		{
 			"checksumSHA1": "jNVqnY1EF1cyX52o9nD8tYXQA4M=",
 			"path": "github.com/lstoll/grpce/helloproto",
-			"revision": "9559fcc3bc54b8ecb785e74f41c5f4d9a47ab7c3",
-			"revisionTime": "2016-12-17T19:07:41Z",
-			"version": "v1.3.1",
-			"versionExact": "v1.3.1"
+			"revision": "9633e639341c345fe05388564e2745f13463d574",
+			"revisionTime": "2017-03-08T02:06:33Z",
+			"version": "v1.4.0",
+			"versionExact": "v1.4.0"
 		},
 		{
 			"checksumSHA1": "Y+HGqEkYM15ir+J93MEaHdyFy0c=",
