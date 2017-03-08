@@ -8,8 +8,6 @@ import (
 
 	"net/url"
 
-	"time"
-
 	"net"
 
 	"strconv"
@@ -21,16 +19,12 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		log.Fatalf("Provide remote host URL")
+		log.Fatalf("Provide remote host URL as first argument")
 	}
 	u, err := url.Parse(os.Args[1])
 	if err != nil {
 		log.Fatalf("Error parsing provided URL [%v]", err)
 	}
-	o := []grpc.DialOption{grpc.WithDialer(h2c.Dialer{URL: u}.DialGRPC)} // dialer to URL?
-	//if u.Scheme != "https" {
-	o = append(o, grpc.WithInsecure())
-	//}
 
 	port := u.Port()
 	if u.Port() == "" {
@@ -40,11 +34,13 @@ func main() {
 		}
 		port = strconv.Itoa(p)
 	}
-	conn, err := grpc.Dial(net.JoinHostPort(u.Hostname(), port), o...)
+	conn, err := grpc.Dial(net.JoinHostPort(u.Hostname(), port),
+		grpc.WithDialer(h2c.Dialer{URL: u}.DialGRPC),
+		grpc.WithInsecure(),
+	)
 	if err != nil {
 		log.Fatalf("Error connecting to remote host [%v]", err)
 	}
-	time.Sleep(1 * time.Second)
 	c := helloproto.NewHelloClient(conn)
 	for i := 0; i < 10; i++ {
 		resp, err := c.HelloWorld(context.Background(), &helloproto.HelloRequest{Name: "grpc-h2c client"})
