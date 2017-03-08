@@ -1,11 +1,12 @@
 {
 	"comment": "",
-	"ignore": "test",
-	"rootPath": "github.com/lstoll/grpc-h2c",
-	 "heroku": {
-        "install" : [ "./..." ],
-        "goVersion": "go1.8"
+	"heroku": {
+		"goVersion": "go1.8",
+		"install": [
+			"./..."
+		]
 	},
+	"ignore": "test",
 	"package": [
 		{
 			"checksumSHA1": "kBeNcaKk56FguvPSUCEaH6AxpRc=",
@@ -36,16 +37,20 @@
 			"revisionTime": "2017-01-16T00:30:03Z"
 		},
 		{
-			"checksumSHA1": "HwLsnapk27meOcqcx4G2iaAysq4=",
+			"checksumSHA1": "N1akwAdrHVfPPrsFOhG2ouP21VA=",
 			"path": "golang.org/x/net/http2",
-			"revision": "d379faa25cbdc04d653984913a2ceb43b0bc46d7",
-			"revisionTime": "2017-01-16T00:30:03Z"
+			"revision": "242b6b35177ec3909636b6cf6a47e8c2c6324b5d",
+			"revisionTime": "2017-01-18T00:26:41Z",
+			"version": "release-branch.go1.8",
+			"versionExact": "release-branch.go1.8"
 		},
 		{
-			"checksumSHA1": "kyClpesDqa6LA7CFPGgKrX9NKkA=",
+			"checksumSHA1": "HzuGD7AwgC0p1az1WAQnEFnEk98=",
 			"path": "golang.org/x/net/http2/hpack",
-			"revision": "d379faa25cbdc04d653984913a2ceb43b0bc46d7",
-			"revisionTime": "2017-01-16T00:30:03Z"
+			"revision": "242b6b35177ec3909636b6cf6a47e8c2c6324b5d",
+			"revisionTime": "2017-01-18T00:26:41Z",
+			"version": "release-branch.go1.8",
+			"versionExact": "release-branch.go1.8"
 		},
 		{
 			"checksumSHA1": "GIGmSrYACByf5JDIP9ByBZksY80=",
@@ -160,5 +165,5 @@
 			"versionExact": "v1.0.5"
 		}
 	],
-	"rootPath": "github.com/lstoll/grpc-h2c"
+	"rootPath": "github.com/lstoll/heroku-grpc-h2c"
 }

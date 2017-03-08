@@ -8,6 +8,8 @@ import (
 
 	"net/url"
 
+	"time"
+
 	"github.com/lstoll/grpce/h2c"
 	"github.com/lstoll/grpce/helloproto"
 	"google.golang.org/grpc"
@@ -29,6 +31,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error connecting to remote host [%v]", err)
 	}
+	time.Sleep(1 * time.Second)
 	c := helloproto.NewHelloClient(conn)
 	resp, err := c.HelloWorld(context.Background(), &helloproto.HelloRequest{Name: "grpc-h2c client"})
 	if err != nil {
